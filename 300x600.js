@@ -25,8 +25,8 @@ lib.ssMetadata = [];
 
 
 
-(lib._300x600bg = function() {
-	this.initialize(img._300x600bg);
+(lib._300600bg = function() {
+	this.initialize(img._300600bg);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,300,600);
 
@@ -156,13 +156,13 @@ if (reversed == null) { reversed = false; }
 
 	// Layer_1
 	this.instance = new lib.Kiekvienadetalė();
-	this.instance.setTransform(-131.5,-13.5);
+	this.instance.setTransform(-132,-14,0.9429,0.9438);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
 	this._renderFirstFrame();
 
-}).prototype = getMCSymbolPrototype(lib.kiekvienadetale, new cjs.Rectangle(-131.5,-13.5,263,27), null);
+}).prototype = getMCSymbolPrototype(lib.kiekvienadetale, new cjs.Rectangle(-132,-14,248,25.5), null);
 
 
 (lib.ieskome = function(mode,startPosition,loop,reversed) {
@@ -187,6 +187,28 @@ if (reversed == null) { reversed = false; }
 }).prototype = getMCSymbolPrototype(lib.ieskome, new cjs.Rectangle(-49.5,-10.5,99,21), null);
 
 
+(lib._300600bg_1 = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+
+	// Layer_1
+	this.instance = new lib._300600bg();
+	this.instance.setTransform(-150,-300);
+
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = getMCSymbolPrototype(lib._300600bg_1, new cjs.Rectangle(-150,-300,300,600), null);
+
+
 // stage content:
 (lib._300x600 = function(mode,startPosition,loop,reversed) {
 if (loop == null) { loop = true; }
@@ -204,38 +226,43 @@ if (reversed == null) { reversed = false; }
 	this.instance.setTransform(114.5,88.45);
 	this.instance.alpha = 0;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).to({x:113.5,y:73,alpha:1,mode:"independent"},14).wait(285));
+	this.timeline.addTween(cjs.Tween.get(this.instance).to({x:113.5,y:73,alpha:1,mode:"independent"},14,cjs.Ease.quadOut).wait(285));
 
 	// Kiekviena_detalė
 	this.instance_1 = new lib.kiekvienadetale("synched",0);
-	this.instance_1.setTransform(156.5,142.5);
+	this.instance_1.setTransform(156.5,159.1);
 	this.instance_1.alpha = 0;
+	this.instance_1._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(9).to({y:159.1},0).to({y:142.5,alpha:1,mode:"independent"},15,cjs.Ease.quadOut).wait(275));
+	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(9).to({_off:false},0).to({y:142.5,alpha:1,mode:"independent"},15,cjs.Ease.quadOut).wait(275));
 
 	// mūsų_ateitis
-	this.instance_2 = new lib.musuateitis();
-	this.instance_2.setTransform(142,188.5);
+	this.instance_2 = new lib.musuateitis("synched",0);
+	this.instance_2.setTransform(142,199.5);
 	this.instance_2.alpha = 0;
+	this.instance_2._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(14).to({y:199.5,mode:"synched",startPosition:0},0).to({y:188.5,alpha:1,mode:"independent"},15).wait(270));
+	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(14).to({_off:false},0).to({y:188.5,alpha:1,mode:"independent"},15,cjs.Ease.quadOut).wait(270));
 
 	// Ieškome
 	this.instance_3 = new lib.ieskome();
-	this.instance_3.setTransform(79.5,524.5);
+	this.instance_3.setTransform(79.5,535.5);
 	this.instance_3.alpha = 0;
+	this.instance_3._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(59).to({y:535.5},0).to({y:524.5,alpha:1},15,cjs.Ease.quadOut).wait(225));
+	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(59).to({_off:false},0).to({y:524.5,alpha:1},15,cjs.Ease.quadOut).wait(225));
 
 	// komandos_papildymo
 	this.instance_4 = new lib.komandospapildymo_1();
-	this.instance_4.setTransform(135.5,554.5);
+	this.instance_4.setTransform(135.5,565.5);
 	this.instance_4.alpha = 0;
+	this.instance_4._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(64).to({y:565.5},0).to({y:554.5,alpha:1},15).wait(220));
+	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(64).to({_off:false},0).to({y:554.5,alpha:1},15,cjs.Ease.quadOut).wait(220));
 
-	// Layer_8
-	this.instance_5 = new lib._300x600bg();
+	// bg
+	this.instance_5 = new lib._300600bg_1();
+	this.instance_5.setTransform(150,300);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_5).wait(299));
 
@@ -252,7 +279,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/_300x600bg.jpg", id:"_300x600bg"},
+		{src:"images/_300600bg.jpg", id:"_300600bg"},
 		{src:"images/Ieškome.png", id:"Ieškome"},
 		{src:"images/Kiekvienadetalė.png", id:"Kiekvienadetalė"},
 		{src:"images/komandospapildymo.png", id:"komandospapildymo"},
