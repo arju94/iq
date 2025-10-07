@@ -25,8 +25,8 @@ lib.ssMetadata = [];
 
 
 
-(lib._300600bg = function() {
-	this.initialize(img._300600bg);
+(lib.fonas = function() {
+	this.initialize(img.fonas);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,300,600);
 
@@ -187,7 +187,7 @@ if (reversed == null) { reversed = false; }
 }).prototype = getMCSymbolPrototype(lib.ieskome, new cjs.Rectangle(-49.5,-10.5,99,21), null);
 
 
-(lib._300600bg_1 = function(mode,startPosition,loop,reversed) {
+(lib.fonassymbol = function(mode,startPosition,loop,reversed) {
 if (loop == null) { loop = true; }
 if (reversed == null) { reversed = false; }
 	var props = new Object();
@@ -198,15 +198,15 @@ if (reversed == null) { reversed = false; }
 	props.reversed = reversed;
 	cjs.MovieClip.apply(this,[props]);
 
-	// Layer_1
-	this.instance = new lib._300600bg();
+	// fonas
+	this.instance = new lib.fonas();
 	this.instance.setTransform(-150,-300);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
 	this._renderFirstFrame();
 
-}).prototype = getMCSymbolPrototype(lib._300600bg_1, new cjs.Rectangle(-150,-300,300,600), null);
+}).prototype = getMCSymbolPrototype(lib.fonassymbol, new cjs.Rectangle(-150,-300,300,600), null);
 
 
 // stage content:
@@ -260,8 +260,8 @@ if (reversed == null) { reversed = false; }
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(64).to({_off:false},0).to({y:554.5,alpha:1},15,cjs.Ease.quadOut).wait(220));
 
-	// bg
-	this.instance_5 = new lib._300600bg_1();
+	// fonas
+	this.instance_5 = new lib.fonassymbol();
 	this.instance_5.setTransform(150,300);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_5).wait(299));
@@ -279,7 +279,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/_300600bg.jpg", id:"_300600bg"},
+		{src:"images/fonas.jpg", id:"fonas"},
 		{src:"images/Ieškome.png", id:"Ieškome"},
 		{src:"images/Kiekvienadetalė.png", id:"Kiekvienadetalė"},
 		{src:"images/komandospapildymo.png", id:"komandospapildymo"},
