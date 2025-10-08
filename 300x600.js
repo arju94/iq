@@ -31,22 +31,10 @@ lib.ssMetadata = [];
 p.nominalBounds = new cjs.Rectangle(0,0,300,600);
 
 
-(lib.Ieškome = function() {
-	this.initialize(img.Ieškome);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,99,21);
-
-
-(lib.Kiekvienadetalė = function() {
-	this.initialize(img.Kiekvienadetalė);
+(lib.Kiekvienadetale = function() {
+	this.initialize(img.Kiekvienadetale);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,263,27);
-
-
-(lib.komandospapildymo = function() {
-	this.initialize(img.komandospapildymo);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,213,23);
 
 
 (lib.Logo = function() {
@@ -55,8 +43,8 @@ p.nominalBounds = new cjs.Rectangle(0,0,213,23);
 p.nominalBounds = new cjs.Rectangle(0,0,171,70);
 
 
-(lib.mūsųateitis = function() {
-	this.initialize(img.mūsųateitis);
+(lib.musuateitis = function() {
+	this.initialize(img.musuateitis);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,234,43);// helper functions:
 
@@ -77,7 +65,7 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	}
 
 
-(lib.musuateitis = function(mode,startPosition,loop,reversed) {
+(lib.musuateitis_1 = function(mode,startPosition,loop,reversed) {
 if (loop == null) { loop = true; }
 if (reversed == null) { reversed = false; }
 	var props = new Object();
@@ -89,14 +77,14 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Layer_1
-	this.instance = new lib.mūsųateitis();
+	this.instance = new lib.musuateitis();
 	this.instance.setTransform(-117,-21.5);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
 	this._renderFirstFrame();
 
-}).prototype = getMCSymbolPrototype(lib.musuateitis, new cjs.Rectangle(-117,-21.5,234,43), null);
+}).prototype = getMCSymbolPrototype(lib.musuateitis_1, new cjs.Rectangle(-117,-21.5,234,43), null);
 
 
 (lib.logo = function(mode,startPosition,loop,reversed) {
@@ -121,28 +109,6 @@ if (reversed == null) { reversed = false; }
 }).prototype = getMCSymbolPrototype(lib.logo, new cjs.Rectangle(-85.5,-35,171,70), null);
 
 
-(lib.komandospapildymo_1 = function(mode,startPosition,loop,reversed) {
-if (loop == null) { loop = true; }
-if (reversed == null) { reversed = false; }
-	var props = new Object();
-	props.mode = mode;
-	props.startPosition = startPosition;
-	props.labels = {};
-	props.loop = loop;
-	props.reversed = reversed;
-	cjs.MovieClip.apply(this,[props]);
-
-	// Layer_1
-	this.instance = new lib.komandospapildymo();
-	this.instance.setTransform(-106.5,-11.5);
-
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
-
-	this._renderFirstFrame();
-
-}).prototype = getMCSymbolPrototype(lib.komandospapildymo_1, new cjs.Rectangle(-106.5,-11.5,213,23), null);
-
-
 (lib.kiekvienadetale = function(mode,startPosition,loop,reversed) {
 if (loop == null) { loop = true; }
 if (reversed == null) { reversed = false; }
@@ -155,7 +121,7 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Layer_1
-	this.instance = new lib.Kiekvienadetalė();
+	this.instance = new lib.Kiekvienadetale();
 	this.instance.setTransform(-132,-14,0.9429,0.9438);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -163,28 +129,6 @@ if (reversed == null) { reversed = false; }
 	this._renderFirstFrame();
 
 }).prototype = getMCSymbolPrototype(lib.kiekvienadetale, new cjs.Rectangle(-132,-14,248,25.5), null);
-
-
-(lib.ieskome = function(mode,startPosition,loop,reversed) {
-if (loop == null) { loop = true; }
-if (reversed == null) { reversed = false; }
-	var props = new Object();
-	props.mode = mode;
-	props.startPosition = startPosition;
-	props.labels = {};
-	props.loop = loop;
-	props.reversed = reversed;
-	cjs.MovieClip.apply(this,[props]);
-
-	// Layer_1
-	this.instance = new lib.Ieškome();
-	this.instance.setTransform(-49.5,-10.5);
-
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
-
-	this._renderFirstFrame();
-
-}).prototype = getMCSymbolPrototype(lib.ieskome, new cjs.Rectangle(-49.5,-10.5,99,21), null);
 
 
 (lib.fonassymbol = function(mode,startPosition,loop,reversed) {
@@ -210,7 +154,7 @@ if (reversed == null) { reversed = false; }
 
 
 // stage content:
-(lib._300x600 = function(mode,startPosition,loop,reversed) {
+(lib._300x600suCTAprisijunk = function(mode,startPosition,loop,reversed) {
 if (loop == null) { loop = true; }
 if (reversed == null) { reversed = false; }
 	var props = new Object();
@@ -228,7 +172,7 @@ if (reversed == null) { reversed = false; }
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).to({x:113.5,y:73,alpha:1,mode:"independent"},14,cjs.Ease.quadOut).wait(285));
 
-	// Kiekviena_detalė
+	// Kiekviena_detale
 	this.instance_1 = new lib.kiekvienadetale("synched",0);
 	this.instance_1.setTransform(156.5,159.1);
 	this.instance_1.alpha = 0;
@@ -236,35 +180,62 @@ if (reversed == null) { reversed = false; }
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(9).to({_off:false},0).to({y:142.5,alpha:1,mode:"independent"},15,cjs.Ease.quadOut).wait(275));
 
-	// mūsų_ateitis
-	this.instance_2 = new lib.musuateitis("synched",0);
+	// musuateitis
+	this.instance_2 = new lib.musuateitis_1("synched",0);
 	this.instance_2.setTransform(142,199.5);
 	this.instance_2.alpha = 0;
 	this.instance_2._off = true;
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(14).to({_off:false},0).to({y:188.5,alpha:1,mode:"independent"},15,cjs.Ease.quadOut).wait(270));
 
-	// Ieškome
-	this.instance_3 = new lib.ieskome();
-	this.instance_3.setTransform(79.5,535.5);
-	this.instance_3.alpha = 0;
-	this.instance_3._off = true;
+	// prisijunk
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#FFFFFF").s().p("AAUBaIgggzIgMAMIAAAnIgiAAIAAizIAiAAIAABjIAHgIIAfgmIApAAIguA0IAyBKg");
+	this.shape.setTransform(191.275,534.7);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(59).to({_off:false},0).to({y:524.5,alpha:1},15,cjs.Ease.quadOut).wait(225));
+	this.shape_1 = new cjs.Shape();
+	this.shape_1.graphics.f("#FFFFFF").s().p("AAVBAIAAhQQAAgLgFgEQgFgFgLAAQgNAAgHAMIAABYIgiAAIAAh+IAgAAIABAQQAOgSAVABQAVAAAJALQAKAMABAXIAABRg");
+	this.shape_1.setTransform(177.375,537.25);
 
-	// komandos_papildymo
-	this.instance_4 = new lib.komandospapildymo_1();
-	this.instance_4.setTransform(135.5,565.5);
-	this.instance_4.alpha = 0;
-	this.instance_4._off = true;
+	this.shape_2 = new cjs.Shape();
+	this.shape_2.graphics.f("#FFFFFF").s().p("AgrA1QgLgMAAgWIAAhTIAiAAIAABRQAAAUASAAQARAAAGgMIAAhZIAiAAIAAB+IggAAIgBgNQgMAQgWAAQgUAAgLgMg");
+	this.shape_2.setTransform(163.9,537.475);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(64).to({_off:false},0).to({y:554.5,alpha:1},15,cjs.Ease.quadOut).wait(220));
+	this.shape_3 = new cjs.Shape();
+	this.shape_3.graphics.f("#FFFFFF").s().p("AgdBwIAAgbIAKABQAPAAAAgQIAAiFIAhAAIAACFQAAAVgLALQgLAMgUAAQgJAAgHgCgAgBhTQgFgFgBgHQABgIAFgFQAEgFAIAAQAJAAAGAFQAEAFAAAIQAAAHgEAFQgGAFgJAAQgIAAgEgFg");
+	this.shape_3.setTransform(152.95,537.4);
+
+	this.shape_4 = new cjs.Shape();
+	this.shape_4.graphics.f("#FFFFFF").s().p("AgQBYIAAh+IAhAAIAAB+gAgNg5QgFgGAAgHQAAgIAFgFQAFgEAIgBQAJABAFAEQAFAFAAAIQAAAHgFAGQgFAEgJAAQgIAAgFgEg");
+	this.shape_4.setTransform(147.875,534.85);
+
+	this.shape_5 = new cjs.Shape();
+	this.shape_5.graphics.f("#FFFFFF").s().p("AgbA8QgMgGgHgKQgHgKAAgLIAgAAQABAJAGAFQAGAFAJAAQAKAAAFgEQAFgEAAgGQAAgGgGgEQgGgDgMgDQgugJAAgcQAAgRAOgMQAOgLAVAAQAZAAAPALQAOAMAAASIgiAAQAAgHgFgFQgEgFgLAAQgHAAgEAEQgFAEgBAGQAAAGAGADQAGAEALACIAVAGQAbAJAAAYQAAARgPALQgOALgYAAQgPAAgNgGg");
+	this.shape_5.setTransform(138.4,537.375);
+
+	this.shape_6 = new cjs.Shape();
+	this.shape_6.graphics.f("#FFFFFF").s().p("AgQBYIAAh+IAhAAIAAB+gAgNg5QgFgGAAgHQAAgIAFgFQAFgEAIgBQAJABAFAEQAFAFAAAIQAAAHgFAGQgFAEgJAAQgIAAgFgEg");
+	this.shape_6.setTransform(129.225,534.85);
+
+	this.shape_7 = new cjs.Shape();
+	this.shape_7.graphics.f("#FFFFFF").s().p("AgjBAIAAh+IAgAAIABAQQAJgRASAAQAGgBAFACIAAAhIgNgCQgTAAgFAOIAABRg");
+	this.shape_7.setTransform(122.175,537.25);
+
+	this.shape_8 = new cjs.Shape();
+	this.shape_8.graphics.f("#FFFFFF").s().p("AhABVIAAipIBBAAQAUAAAOAHQAPAHAHANQAIANAAAQQABAZgSAOQgRAOgfAAIgdAAIAAA8gAgdgCIAeAAQAOAAAIgHQAHgGAAgNQAAgMgHgIQgIgIgNAAIgfAAg");
+	this.shape_8.setTransform(109.85,535.175);
+
+	this.shape_9 = new cjs.Shape();
+	this.shape_9.graphics.f("#F5831F").s().p("AobDUQhYAAg/g+Qg+g+AAhYQAAhXA+g+QA/g/BYABIQ3AAQBYgBA+A/QA/A+AABXQAABYg/A+Qg+A+hYAAg");
+	this.shape_9.setTransform(150.025,535.95);
+
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_9},{t:this.shape_8},{t:this.shape_7},{t:this.shape_6},{t:this.shape_5},{t:this.shape_4},{t:this.shape_3},{t:this.shape_2},{t:this.shape_1},{t:this.shape}]}).wait(299));
 
 	// fonas
-	this.instance_5 = new lib.fonassymbol();
-	this.instance_5.setTransform(150,300);
+	this.instance_3 = new lib.fonassymbol();
+	this.instance_3.setTransform(150,300);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_5).wait(299));
+	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(299));
 
 	this._renderFirstFrame();
 
@@ -280,11 +251,9 @@ lib.properties = {
 	opacity: 1.00,
 	manifest: [
 		{src:"images/fonas.jpg", id:"fonas"},
-		{src:"images/Ieškome.png", id:"Ieškome"},
-		{src:"images/Kiekvienadetalė.png", id:"Kiekvienadetalė"},
-		{src:"images/komandospapildymo.png", id:"komandospapildymo"},
+		{src:"images/Kiekvienadetale.png", id:"Kiekvienadetale"},
 		{src:"images/Logo.png", id:"Logo"},
-		{src:"images/mūsųateitis.png", id:"mūsųateitis"}
+		{src:"images/musuateitis.png", id:"musuateitis"}
 	],
 	preloads: []
 };
