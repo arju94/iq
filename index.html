@@ -1,16 +1,8 @@
 <!DOCTYPE html>
-<!--
-	NOTES:
-	1. All tokens are represented by '$' sign in the template.
-	2. You can write your code only wherever mentioned.
-	3. All occurrences of existing tokens will be replaced by their appropriate values.
-	4. Blank lines will be removed automatically.
-	5. Remove unnecessary comments before creating your template.
--->
 <html>
 <head>
 	<meta name="ad.size" content="width=300,height=600">
-<script type="text/javascript">
+<script>
 var clickTag = "https://career-lithuania.kitron.com/departments/karjera-inzinerijoje";
 </script>
 <meta charset="UTF-8">
@@ -60,7 +52,10 @@ function handleComplete(evt,comp) {
 	fnStartAnimation();
 }
 </script>
-<!-- write your code here -->
+  <style>
+    html, body { margin: 0; }
+    #tap-area { position: absolute; inset: 0; cursor: pointer; }
+  </style>
 </head>
 <a href="javascript:void(window.open(clickTag))">
 </a>
@@ -70,5 +65,12 @@ function handleComplete(evt,comp) {
 		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:300px; height:600px; position: absolute; left: 0px; top: 0px; display: block;">
 		</div>
 	</div>
+		 <div id="tap-area" aria-label="Open advertiser site" role="button" tabindex="0"></div>
+  <script>
+    var area = document.getElementById('tap-area');
+    function openClick(){ window.open(clickTag, '_blank'); }
+    area.addEventListener('click', openClick);
+    area.addEventListener('keydown', function(e){ if(e.key === 'Enter' || e.key === ' ') openClick(); });
+  </script>
 </body>
 </html>
